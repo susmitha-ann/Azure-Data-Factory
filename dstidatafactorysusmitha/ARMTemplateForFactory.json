@@ -233,6 +233,37 @@
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/linkedServices/UserDatabase')]"
 			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/Every2min')]",
+			"type": "Microsoft.DataFactory/factories/triggers",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"runtimeState": "Started",
+				"pipelines": [
+					{
+						"pipelineReference": {
+							"referenceName": "CopyUser",
+							"type": "PipelineReference"
+						},
+						"parameters": {}
+					}
+				],
+				"type": "ScheduleTrigger",
+				"typeProperties": {
+					"recurrence": {
+						"frequency": "Minute",
+						"interval": 2,
+						"startTime": "2024-10-29T14:46:00",
+						"endTime": "2024-10-30T14:53:00",
+						"timeZone": "Romance Standard Time"
+					}
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/pipelines/CopyUser')]"
+			]
 		}
 	]
 }
