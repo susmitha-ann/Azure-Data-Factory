@@ -1,0 +1,24 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "dstidatafactorysusmitha"
+		},
+		"AzureBlobStorage11_connectionString": {
+			"value": ""
+		},
+		"UserDatabase_password": {
+			"value": ""
+		},
+		"UserDatabase_properties_typeProperties_server": {
+			"value": "susmitha-ann.database.windows.net"
+		},
+		"UserDatabase_properties_typeProperties_database": {
+			"value": "users"
+		},
+		"UserDatabase_properties_typeProperties_userName": {
+			"value": "susmitha"
+		}
+	}
+}
